@@ -6,7 +6,7 @@ try:
 except:
     from utils import GO_ICP_EXE, GO_ICP_CPP_LIST
 
-def compile_go_icp(force:bool=False) -> bool:
+def compile_go_icp(force:bool=False, print_output:bool=False) -> bool:
     if force:
         if os.path.isfile(GO_ICP_EXE):
             os.remove(GO_ICP_EXE)
@@ -16,7 +16,9 @@ def compile_go_icp(force:bool=False) -> bool:
         return True
     
     # recompile
-    print("Compiling Go-ICP ...")
+    if print_output:
+        print("Compiling Go-ICP ...")
+    
     suc, msg = cpp_simple_interface.compile_cpp_files(
         GO_ICP_CPP_LIST, 
         GO_ICP_EXE)

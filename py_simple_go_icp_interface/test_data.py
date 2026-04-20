@@ -86,9 +86,9 @@ def make_reg_pair(
     return src, tgt, R, T
 
 def load_test_data() -> tuple[np.ndarray, np.ndarray]:
-    bunny = load_bunny(down_sample=0.2, noise=0.001)
+    bunny = load_bunny(down_sample=0.2, noise=0.0001)
     src, tgt, R_true, T_true = make_reg_pair(bunny, seed=42, rot_deg=(-90, 35, -45.5))
-    return src, tgt
+    return src * 100, tgt * 100
 
 def visualize_two_point_clouds(
     source: np.ndarray,
