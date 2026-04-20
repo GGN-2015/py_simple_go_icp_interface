@@ -101,7 +101,7 @@ def go_icp_match(
             transWidth = 2 * tran_radius
         if MSEThresh is None:
             assert transWidth is not None
-            MSEThresh = transWidth * 0.0001
+            MSEThresh = transWidth * 0.001
 
         # save config
         save_config_txt(

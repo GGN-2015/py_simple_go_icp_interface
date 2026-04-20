@@ -1,6 +1,6 @@
 [project]
 name = "py-simple-go-icp-interface"
-version = "0.1.1"
+version = "0.1.2"
 description = "A simple python encapsulation of Go-ICP."
 authors = [
     {name = "GGN_2015",email = "neko@jlulug.org"}
